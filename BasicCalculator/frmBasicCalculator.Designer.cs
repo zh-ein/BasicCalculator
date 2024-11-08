@@ -31,9 +31,12 @@
             label1 = new Label();
             txtNum1 = new TextBox();
             txtNum2 = new TextBox();
-            rtbResult = new RichTextBox();
             cbOperations = new ComboBox();
             btnCompute = new Button();
+            panel1 = new Panel();
+            lblResult = new Label();
+            label2 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -62,17 +65,6 @@
             txtNum2.Size = new Size(342, 46);
             txtNum2.TabIndex = 1;
             // 
-            // rtbResult
-            // 
-            rtbResult.BackColor = Color.Black;
-            rtbResult.Font = new Font("Sylfaen", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rtbResult.ForeColor = Color.LawnGreen;
-            rtbResult.Location = new Point(32, 293);
-            rtbResult.Name = "rtbResult";
-            rtbResult.Size = new Size(339, 106);
-            rtbResult.TabIndex = 2;
-            rtbResult.Text = "";
-            // 
             // cbOperations
             // 
             cbOperations.FormattingEnabled = true;
@@ -83,27 +75,60 @@
             // 
             // btnCompute
             // 
-            btnCompute.Location = new Point(136, 429);
+            btnCompute.Location = new Point(136, 423);
             btnCompute.Name = "btnCompute";
-            btnCompute.Size = new Size(128, 38);
+            btnCompute.Size = new Size(137, 44);
             btnCompute.TabIndex = 4;
             btnCompute.Text = "Compute";
             btnCompute.UseVisualStyleBackColor = true;
             btnCompute.Click += btnCompute_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(lblResult);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(37, 306);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(336, 101);
+            panel1.TabIndex = 5;
+            // 
+            // lblResult
+            // 
+            lblResult.AutoSize = true;
+            lblResult.Font = new Font("Sylfaen", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblResult.ForeColor = Color.Chartreuse;
+            lblResult.Location = new Point(89, 28);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(0, 52);
+            lblResult.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Sylfaen", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Chartreuse;
+            label2.Location = new Point(12, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(71, 31);
+            label2.TabIndex = 6;
+            label2.Text = "Total:";
             // 
             // frmBasicCalculator
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(417, 494);
+            Controls.Add(panel1);
             Controls.Add(btnCompute);
             Controls.Add(cbOperations);
-            Controls.Add(rtbResult);
             Controls.Add(txtNum2);
             Controls.Add(txtNum1);
             Controls.Add(label1);
             Name = "frmBasicCalculator";
             Text = "frmBasicCalculator";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,8 +138,10 @@
         private Label label1;
         private TextBox txtNum1;
         private TextBox txtNum2;
-        private RichTextBox rtbResult;
         private ComboBox cbOperations;
         private Button btnCompute;
+        private Panel panel1;
+        private Label lblResult;
+        private Label label2;
     }
 }

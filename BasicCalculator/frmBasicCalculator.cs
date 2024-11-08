@@ -46,7 +46,7 @@ namespace BasicCalculator
                         break;
                 }
 
-                rtbResult.Text = $"Result:\n {result}";
+                lblResult.Text = $"{result}";
             }
             catch (FormatException)
             {
